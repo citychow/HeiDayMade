@@ -1,0 +1,47 @@
+.gradient-background {
+    display: flex;
+    background: linear-gradient(300deg, #c800ff, #ffbd4c, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    height:auto;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+h1 {
+    font-family: "Neonderthaw", sans-serif;
+    color:rgb(255, 247, 196);
+}
+h2 {
+  font-family: "Oooh Baby", sans-serif;
+}
+
+p{
+  font-family: "El Messiri", sans-serif;
+}
+
+li{
+  font-family: "El Messiri", sans-serif;
+}
+img {
+  max-height: 350px;
+}
+img.project{
+  max-height: 200px;
+}
+.nav-item{
+    padding-inline: 5px;
+}
+.navbar-brand{
+  font-family: "Neonderthaw", sans-serif;
+  color:rgb(255, 247, 196);
+}
