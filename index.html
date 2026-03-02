@@ -34,7 +34,7 @@
 
             <div class="row mt-5 mx-10">
                 <div class="col-8">
-                    <h2><img src="../Hei Image/gif_icon/sunrise_1.gif">About<img src="../Hei Image/gif_icon/sunrise_1.gif"></h2>
+                    <h2><span class="gif" data-type="landing-about"></span>About<span class="gif" data-type="landing-about"></span></h2>
                     <p></p>
                     <p>Welcome to my site! 🏗️</p>
                     <p> This is the first website I created intend to keep a track record on everything I made.</p>
@@ -43,37 +43,16 @@
                     </p>
                     <a class="btn btn-light" href="./aboutme.html" role="button">Story of HeiDayMade</a>
                 </div>
+                
                 <div class="col-4 d-flex align-items-center text-center">
-                    <img src="../Hei Image/dp/IMG_0859.jpg" class="rounded-circle img-fluid" id="propic" alt="profilepic">
+                    <div data-type="dp" class="showcase"></div>
                 </div>
             </div>
 
             <div class="row mt-5">
-                <div class="col-3 d-flex align-items-center text-center">
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../Hei Image/Landing page/IMG_9395.jpg" class="rounded-2 img-fluid d-block" alt="crochetwork">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../Hei Image/Landing page/IMG_9906.jpg" class="rounded-2 img-fluid d-block" alt="beadswork">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../Hei Image/Leather/20240408_233102.jpg" class="rounded-2 img-fluid d-block" alt="leatherwork">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                </div>
+                <div class="col-3 d-flex align-items-center text-center showcase" data-mode="carousel" data-type="carousel"></div>               
                 <div class="col-9">
-                    <h2><img src="../Hei Image/gif_icon/bread2 (1).gif">   Creation  <img src="../Hei Image/gif_icon/bread2 (1).gif"></h2>
+                    <h2><span class="gif" data-type="landing-creation"></span> Creation  <span class="gif" data-type="landing-creation"></span></h2>
                     <p></p>
                     <p> I always find peace and joy in the process of crafting. I hope my creation bring these to you too. </p>
                     <p> Everything here is imperfect - I created most of them spontaneously. After all, art is an illustration of our lives, none of it is perfect. In our journey of pursuing better lives, we learn from glitches and then grow step by step. Let's embrace imperfection and admit that it is what shapes who we are. </p>
@@ -89,9 +68,9 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-5 mx-10S">
                 <div class="col-8">
-                    <h2><img src="../Hei Image/gif_icon/alarmClock.gif">  Coding  <img src="../Hei Image/gif_icon/alarmClock.gif"></h2>
+                    <h2><span class="gif" data-type="landing-coding"></span>  Coding  <span class="gif" data-type="landing-coding"></span></h2>
                     <p></p>
                     <p> My first ever HTML & CSS Project is live! (Here) </p>
                     <p> Okay but what's next? I am not sure yet. I guess having some side projects could be fun...if I have time to code instead of to craft.</p>
@@ -105,16 +84,16 @@
                     <p> In the Project, you might find some inspiration on side projects - or not 😛 </p>
                     <a class="btn btn-light" href="./Project-Main.html" role="button">Go to Project</a>
                 </div>
-                <div class="col-4 d-flex align-items-center text-center">
-                    <img src="../Hei Image/Web.png" class="rounded img-fluid" alt="coding dp" height="300px">
+                <div class="col-4 d-flex align-items-center text-center showcase" data-type="web">
+                    
                 </div>
             </div>
         </div>
-    </section>s
+    </section>
       <!-- Contact Me -->
       <section id="contact">
         <div class="container mt-2" style="text-align: center" >
-            <h2><img src="../Hei Image/gif_icon/letter (2).gif"> Thoughts? Leave me a message! <img src="../Hei Image/gif_icon/letter (2).gif"></h2>
+            <h2><span class="gif" data-type="feedback"></span> Thoughts? Leave me a message! <span class="gif" data-type="feedback"></span></h2>
             <a class="btn btn-light" href="./Form-Main.html" role="button">Feedback Form</a>
         </div>
       </section>
@@ -139,5 +118,8 @@
           </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-</body>
+    <script src="./config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./other-img.js"></script>
+  </body>
 </html>
