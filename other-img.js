@@ -4,38 +4,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.APP_CONFIG.SUPABASE_KEY
     );
 
-    const containers = document.querySelectorAll('.showcase');
+    const allContainers = document.querySelectorAll('.showcase, .gif');
 
-    const gifContainers = document.querySelectorAll('.gif');
-    gifContainers.forEach(async (container) => {
-        const placeRef = container.getAttribute('data-type');
-        const { data, error } = await supabase
-        .from('gif')
-        .select('*')
-        .eq('place', placeRef);
-        
-        if (error) return console.error(error);
-        
-        container.innerHTML = data.map(item => `
-            <img src="${item.gif_url}" alt="${item.note}" class="img-fluid" height="36px" width="36px">
-        `).join('');
-    });
-
-    containers.forEach(async (container) => {
+    allContainers.forEach(async (container) => {
+        const isGif = container.classList.contains('gif');
+        const table = isGif ? 'gif' : 'index';
         const placeRef = container.getAttribute('data-type');
         const isCarousel = container.getAttribute('data-mode') === 'carousel';
 
-        const { data, error } = await supabase
-            .from('index')
-            .select('*')
-            .eq('place', placeRef);
+        const { data, error } = await supabase.from(table).select('*').eq('place', placeRef);
+        if (error) return console.error(error);
 
-        if (error) {
-            console.error(`Fail to extract ${placeRef} data:`, error);
-            return;
-        }
-
-        if (isCarousel) {
+        // 根據來源與模式渲染
+        if (isGif) {
+            container.innerHTML = data.map(item => `
+                <img src="${item.gif_url}" alt="${item.note}" class="img-fluid" style="width:36px; height:36px;">
+            `).join('');
+        } else if (isCarousel) {
             renderCarousel(container, data);
         } else {
             renderStandard(container, data);
