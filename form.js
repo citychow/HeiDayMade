@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // prevent double submission
         const submitBtn = e.target.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
-        submitBtn.innerText = "提交中...";
+        submitBtn.innerText = "Submitting...";
 
         const { error } = await supabase
             .from('feedback')
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }]);
 
         if (error) {
-            console.error("提交錯誤:", error);
-            alert("提交失敗：" + error.message);
+            console.error("Submission Error:", error);
+            alert("Submission Failed: " + error.message);
             submitBtn.disabled = false;
             submitBtn.innerText = "Submit";
         } else {
