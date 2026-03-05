@@ -1,4 +1,4 @@
-export const Navbar = () => 
+export const Navbar = (currentPage) => 
 `<div class="container">
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary navbar-dark gradient-background" aria-label="Main navigation">
         <div class="container-fluid">
@@ -11,10 +11,10 @@ export const Navbar = () =>
             <ul class="navbar-nav">
               
               <li class="nav-item">
-                <a class="nav-link active" href="./aboutme.html">About</a>
+                <a class="nav-link ${currentPage === 'About' ? 'active' : ''}" href="./About-me.html">About</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="./Gallery-Main.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+                <a class="nav-link dropdown-toggle ${currentPage === 'Gallery' ? 'active' : ''}" href="./Gallery-Main.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="./Gallery-Main.html">Crochet</a></li>
                   <li><a class="dropdown-item" href="./Gallery-Beads.html">Beads</a></li>
@@ -23,10 +23,10 @@ export const Navbar = () =>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Project-Main.html">Project</a>
+                <a class="nav-link ${currentPage === 'Project' ? 'active' : ''}" href="./Project-Main.html">Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Form-Main.html">Feedback</a>
+                <a class="nav-link ${currentPage === 'Form' ? 'active' : ''}" href="./Form-Main.html">Feedback</a>
               </li>
             </ul>
             <!-- <form class="d-flex" role="search">
@@ -50,7 +50,7 @@ export const Footer = () => `
         
             <ul class="nav col-md-4 justify-content-end">
               <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-              <li class="nav-item"><a href="./aboutme.html" class="nav-link px-2 text-body-secondary">About</a></li>
+              <li class="nav-item"><a href="./About-me.html" class="nav-link px-2 text-body-secondary">About</a></li>
               <li class="nav-item"><a href="./Gallery-Main.html" class="nav-link px-2 text-body-secondary">Gallery</a></li>
               <li class="nav-item"><a href="./Project-Main.html" class="nav-link px-2 text-body-secondary">Project</a></li>
               <li class="nav-item"><a href="./Form-Main.html" class="nav-link px-2 text-body-secondary">Feedback</a></li>
