@@ -32,6 +32,12 @@ p{
   font-family: "El Messiri", sans-serif;
 }
 
+small {
+  font-family: "El Messiri", sans-serif;
+  color: red
+}
+
+
 .btn {
   font-family: "El Messiri", sans-serif;
 }
