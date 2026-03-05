@@ -29,10 +29,11 @@ export const Navbar = (currentPage) =>
                 <a class="nav-link ${currentPage === 'Form' ? 'active' : ''}" href="./Form-Main.html">Feedback</a>
               </li>
             </ul>
-            <!-- <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form> -->
+            ${currentPage === 'Gallery' ? `
+                <form class="d-flex" role="search" id="search-form">
+                  <input class="form-control me-2" type="search" placeholder="Search" id="search-input" aria-label="Search">                  <input class="form-control me-2" type="search" placeholder="Search" id="search-input" aria-label="Search">
+                </form>
+            ` : ''}
           </div>
         </div>
       </nav>
