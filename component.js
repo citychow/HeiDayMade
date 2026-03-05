@@ -30,8 +30,8 @@ export const Navbar = (currentPage) =>
               </li>
             </ul>
             ${currentPage === 'Gallery' ? `
-                <form class="d-flex" role="search" id="search-form">
-                  <input class="form-control me-2" type="search" placeholder="Search" id="search-input" aria-label="Search">                  <input class="form-control me-2" type="search" placeholder="Search" id="search-input" aria-label="Search">
+                <form class="d-flex ms-auto" role="search" id="search-form">
+                  <input class="form-control me-2" type="search" placeholder="Search" id="search-input" aria-label="Search">
                 </form>
             ` : ''}
           </div>
