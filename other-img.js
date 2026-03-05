@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const { data, error } = await supabase.from(table).select('*').eq('place', placeRef);
         if (error) return console.error(error);
 
-        // 根據來源與模式渲染
         if (isGif) {
             container.innerHTML = data.map(item => `
                 <img src="${item.gif_url}" alt="${item.note}" class="img-fluid" style="width:36px; height:36px;">
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                     return `
                         <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                            <img src="${item.img_url}" class="rounded-2 d-block" alt="${item.name}" loading="lazy">
+                            <img src="${item.img_url}" class="rounded-2 d-block w-30" alt="${item.name}" loading="lazy">
                         </div>
                     `;
                 }).join('')}
