@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = false;
             submitBtn.innerText = "Submit";
         } else {
-            window.location.href = './Form-Recieved.html';
+            window.location.href = './form-received.html';
         }
     });
 });

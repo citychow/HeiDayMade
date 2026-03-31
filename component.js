@@ -11,22 +11,22 @@ export const Navbar = (currentPage) =>
             <ul class="navbar-nav">
               
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'About' ? 'active' : ''}" href="./About-me.html">About</a>
+                <a class="nav-link ${currentPage === 'About' ? 'active' : ''}" href="./about.html">About</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle ${currentPage === 'Gallery' ? 'active' : ''}" href="./Gallery-Main.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+                <a class="nav-link dropdown-toggle ${currentPage === 'Gallery' ? 'active' : ''}" href="./gallery-crochet.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./Gallery-Main.html">Crochet</a></li>
-                  <li><a class="dropdown-item" href="./Gallery-Beads.html">Beads</a></li>
-                  <li><a class="dropdown-item" href="./Gallery-Leather.html">Leather</a></li>
-                  <li><a class="dropdown-item" href="./Gallery-Others.html">Others</a></li>
+                  <li><a class="dropdown-item" href="./gallery-crochet.html">Crochet</a></li>
+                  <li><a class="dropdown-item" href="./gallery-beads.html">Beads</a></li>
+                  <li><a class="dropdown-item" href="./gallery-leather.html">Leather</a></li>
+                  <li><a class="dropdown-item" href="./gallery-others.html">Others</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'Project' ? 'active' : ''}" href="./Project-Main.html">Project</a>
+                <a class="nav-link ${currentPage === 'Project' ? 'active' : ''}" href="./gallery-crochet.html">Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'Form' ? 'active' : ''}" href="./Form-Main.html">Feedback</a>
+                <a class="nav-link ${currentPage === 'Form' ? 'active' : ''}" href="./form.html">Feedback</a>
               </li>
             </ul>
             ${currentPage === 'Gallery' ? `
@@ -51,10 +51,10 @@ export const Footer = () => `
         
             <ul class="nav col-lg-4 justify-content-end">
               <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-              <li class="nav-item"><a href="./About-me.html" class="nav-link px-2 text-body-secondary">About</a></li>
-              <li class="nav-item"><a href="./Gallery-Main.html" class="nav-link px-2 text-body-secondary">Gallery</a></li>
-              <li class="nav-item"><a href="./Project-Main.html" class="nav-link px-2 text-body-secondary">Project</a></li>
-              <li class="nav-item"><a href="./Form-Main.html" class="nav-link px-2 text-body-secondary">Feedback</a></li>
+              <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+              <li class="nav-item"><a href="./gallery-crochet.html" class="nav-link px-2 text-body-secondary">Gallery</a></li>
+              <li class="nav-item"><a href="./project.html" class="nav-link px-2 text-body-secondary">Project</a></li>
+              <li class="nav-item"><a href="./form.html" class="nav-link px-2 text-body-secondary">Feedback</a></li>
             </ul>
           </footer>
         </div>`;
