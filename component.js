@@ -11,10 +11,10 @@ export const Navbar = (currentPage) =>
             <ul class="navbar-nav">
               
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'About' ? 'active' : ''}" href="./about.html">About</a>
+                <a class="nav-link ${currentPage === 'about' ? 'active' : ''}" href="./about.html">About</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle ${currentPage === 'Gallery' ? 'active' : ''}" href="./gallery-crochet.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+                <a class="nav-link dropdown-toggle ${currentPage === 'gallery' ? 'active' : ''}" href="./gallery-crochet.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="./gallery-crochet.html">Crochet</a></li>
                   <li><a class="dropdown-item" href="./gallery-beads.html">Beads</a></li>
@@ -23,13 +23,13 @@ export const Navbar = (currentPage) =>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'Project' ? 'active' : ''}" href="./gallery-crochet.html">Project</a>
+                <a class="nav-link ${currentPage === 'project' ? 'active' : ''}" href="./project.html">Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'Form' ? 'active' : ''}" href="./form.html">Feedback</a>
+                <a class="nav-link ${currentPage === 'form' ? 'active' : ''}" href="./form.html">Feedback</a>
               </li>
             </ul>
-            ${currentPage === 'Gallery' ? `
+            ${currentPage === 'gallery' ? `
                 <form class="d-flex ms-auto" role="search" id="search-form">
                   <input class="form-control me-2" type="search" placeholder="Search" id="search-input" aria-label="Search">
                 </form>
