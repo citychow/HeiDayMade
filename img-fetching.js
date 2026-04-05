@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         .order('created_at', { ascending: false });
 
     if (error) {
-        container.innerHTML = `<p>載入失敗，請稍後再試。</p>`;
+        container.innerHTML = `<p> Failed to load, please try again later.</p>`;
         console.error(error);
         return;
     } else {
