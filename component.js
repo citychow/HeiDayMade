@@ -11,7 +11,7 @@ export const Navbar = (currentPage) =>
             <ul class="navbar-nav">
               
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'about' ? 'active' : ''}" href="./about.html">About</a>
+                <a class="nav-link ${currentPage === 'about.html' ? 'active' : ''}" href="./about.html">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle ${currentPage === 'gallery' ? 'active' : ''}" href="./gallery-crochet.html" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
@@ -23,10 +23,10 @@ export const Navbar = (currentPage) =>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'project' ? 'active' : ''}" href="./project.html">Project</a>
+                <a class="nav-link ${currentPage === 'project.html' ? 'active' : ''}" href="./project.html">Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link ${currentPage === 'form' ? 'active' : ''}" href="./form.html">Feedback</a>
+                <a class="nav-link ${currentPage === 'form.html' ? 'active' : ''}" href="./form.html">Feedback</a>
               </li>
             </ul>
             ${currentPage === 'gallery' ? `
